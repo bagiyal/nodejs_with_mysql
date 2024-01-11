@@ -1,21 +1,21 @@
+console.log("Starting");
 
-const express = require('express');
-const mysql = require('mysql');
-const app  = express();
+const express = require("express");
+const mysql = require("mysql");
+const app = express();
 const port = 3000;
 
 const connection = mysql.createConnection({
-    host: '127.0.0.1',
-    user: 'root',
-    password: 'password',
-    database: 'tcil-sotc',
-  });
+  host: "127.0.0.1",
+  user: "root",
+  password: "password",
+  database: "tcil-sotc",
+});
 
-  connection.connect((err) =>{
-    if (err) {
-        console.error('Error connecting to MySQL:', err);
+connection.connect((err) => {
+  if (err) {
+    console.error("Error connecting to MySQL:", err);
     return;
-    }
-    console.error('Error connecting to MySQL:', err);
-  })
-
+  }
+  console.log("Connected to MySQL database");
+});
